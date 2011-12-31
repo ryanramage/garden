@@ -1,0 +1,11 @@
+{
+    "name": "garden",
+    "version": "0.0.1",
+    "description": "CouchApp for sharing other CouchApps",
+    "modules": "lib",
+    "load": "lib/app",
+    "dependencies": {
+        "modules": null,
+        "properties": null
+    }
+}
