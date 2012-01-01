@@ -4,8 +4,25 @@
     "description": "CouchApp for sharing other CouchApps",
     "modules": "lib",
     "load": "lib/app",
+    "less": {
+        "compress": true,
+        "compile": "static/css/garden.less",
+        "remove_from_attachments": true
+    },
+    "base_template": "base.html",
+    "handlebars": {
+        "templates": "templates"
+    },
+    "attachments": "static",
     "dependencies": {
         "modules": null,
-        "properties": null
+        "properties": null,
+        "attachments": null,
+        "handlebars": null,
+        "handlebars-helpers": null,
+        "duality-handlebars": null,
+        "duality": null,
+        "duality-contrib-session-hb": null,
+        "less-precompiler": null
     }
 }

@@ -1,0 +1,35 @@
+<div id="secondbar">
+  <div class="container">
+    <div class="row">
+      <div class="span10">
+        <h1>Kanso Garden</h1>
+        <p>A place for sharing and discovering CouchApps</p>
+      </div>
+      <div class="span6">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div id="content">
+    <div class="row">
+
+      <div class="span12">
+        <p>Adding an app:</p>
+        <pre>kanso push {{upload_url}}</pre>
+
+        <h4>Packages</h4>
+        <ul>
+        {{#rows}}
+          <li><a href="{{baseURL}}/details/{{id}}">{{id}}</a></li>
+        {{/rows}}
+        </ul>
+      </div>
+
+      <div id="sidebar" class="span4">
+      </div>
+
+    </div>
+  </div>
+</div>
