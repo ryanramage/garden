@@ -1,11 +1,20 @@
 <div id="secondbar">
   <div class="container">
     <div class="row">
+      <div class="span4">
+        {{#if screenshot}}
+        <img src="{{baseURL}}/_db/{{doc._id}}/{{screenshot}}" width="200" />
+        {{else}}
+        <div class="no_screenshot"><div>No screenshot</div></div>
+        {{/if}}
+      </div>
       <div class="span10">
         <h1>{{doc.kanso.name}}</h1>
         <p>{{doc.kanso.description}}</p>
-      </div>
-      <div class="span6">
+        <div class="install_actions">
+          <a href="#" class="btn">Install to local CouchDB</a>
+          <a href="#" class="btn">Install to IrisCouch</a>
+        </div>
       </div>
     </div>
   </div>
@@ -15,13 +24,17 @@
   <div id="content">
     <div class="row">
 
+      <div id="details_sidebar" class="span4">
+        <p><strong>Version:</strong> {{doc.kanso.version}}</p>
+        <p><strong>Built:</strong> {{build_time}}</p>
+      </div>
+
       <div class="span12">
         <h4>Manual install</h4>
         <pre>curl {{install_script_url}} | bash</pre>
         <p>You may want to <a rel="external" href="{{install_script_url}}">read the script</a> first.</p>
-      </div>
-
-      <div id="sidebar" class="span4">
+        <hr/>
+        <div id="readme"></div>
       </div>
 
     </div>
