@@ -24,6 +24,7 @@
         "duality": null,
         "duality-contrib-session-hb": null,
         "less-precompiler": null,
-        "sanitize": null
+        "sanitize": null,
+        "datelib": null
     }
 }
