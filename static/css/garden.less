@@ -58,7 +58,7 @@
 }
 
 ul.apps {
-    margin: 0;
+    margin: 0 0 2em 0;
     padding: 0;
     list-style-type: none;
 }
@@ -66,6 +66,7 @@ ul.apps li {
     float: left;
     padding: 5px;
     margin-right: 7px;
+    margin-bottom: 10px;
     border: 1px solid #ccc;
     background-color: #f2f2f2;
     .border-radius(3px);
@@ -75,6 +76,12 @@ ul.apps li .name {
     font-weight: bold;
     color: #666;
     text-shadow: 0 1px 0 white;
+}
+ul.apps li a img {
+    opacity: 0.95;
+}
+ul.apps li a:hover img {
+    opacity: 1;
 }
 ul.apps li a {
     display: block;
@@ -86,4 +93,8 @@ ul.apps li a:hover .name {
 ul.apps li:hover {
     background-color: #eee;
     border: 1px solid #bbb;
+}
+.clearapps {
+    clear: left;
+    height: 2em;
 }
