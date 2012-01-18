@@ -9,8 +9,8 @@
         {{/if}}
       </div>
       <div class="span10">
-        <h1>{{doc.kanso.name}}</h1>
-        <p>{{doc.kanso.description}}</p>
+        <h1>{{doc.kanso.config.name}}</h1>
+        <p>{{doc.kanso.config.description}}</p>
         <div class="install_actions">
           <a href="#" class="btn">Install to local CouchDB</a>
           <a href="#" class="btn">Install to IrisCouch</a>
@@ -25,8 +25,10 @@
     <div class="row">
 
       <div id="details_sidebar" class="span4">
-        <p><strong>Version:</strong> {{doc.kanso.version}}</p>
-        <p><strong>Built:</strong> {{build_time}}</p>
+        <p><strong>Version:</strong> {{doc.kanso.config.version}}</p>
+        <p><strong>By:</strong> {{doc.kanso.pushed_by}}</p>
+        <p><strong>Built:</strong> {{doc.kanso.build_time}}</p>
+        <p><strong>Uploaded:</strong> {{doc.kanso.push_time}}</p>
       </div>
 
       <div class="span12">
