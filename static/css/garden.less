@@ -42,3 +42,37 @@
 .install_actions {
     margin: 2em 0 1em 0;
 }
+
+.container {
+    position: relative;
+}
+.stones {
+    background-image: url(../img/stones.png);
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    height: 100px;
+    width: 353px;
+    position: absolute;
+    right: 0;
+    bottom: -10px;
+}
+
+ul.apps {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+ul.apps li {
+    float: left;
+    padding: 5px;
+    margin-right: 7px;
+    border: 1px solid #ccc;
+    background-color: #f2f2f2;
+    .border-radius(3px);
+    .box-shadow(inset 0 1px 1px white);
+}
+ul.apps li .name {
+    font-weight: bold;
+    color: #666;
+    text-shadow: 0 1px 0 white;
+}
