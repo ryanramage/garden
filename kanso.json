@@ -19,7 +19,7 @@
         "properties": null,
         "attachments": null,
         "handlebars": null,
-        "handlebars-helpers": null,
+        "handlebars-helpers": ">=0.0.5",
         "duality-handlebars": null,
         "duality": null,
         "duality-contrib-session-hb": null,

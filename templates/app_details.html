@@ -34,9 +34,12 @@
           <img class="paper-inner" src="{{baseURL}}/{{first screenshots}}" width="640" />
         </div>
         <ul id="screenshot_nav">
-        {{#each screenshots}}
+        {{#head screenshots}}
+          <li class="active" data-screenshot="{{baseURL}}/{{this}}"></li>
+        {{/head}}
+        {{#tail screenshots}}
           <li data-screenshot="{{baseURL}}/{{this}}"></li>
-        {{/each}}
+        {{/tail}}
         </ul>
       </div>
 
