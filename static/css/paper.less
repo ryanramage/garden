@@ -1,0 +1,40 @@
+/* ======================
+        Paper style
+========================*/
+
+.paper {
+    width: 100%;
+    position: relative;
+    background-color: #fff;
+    .box-shadow(0 0 4px rgba(0, 0, 0, 0.2));
+}
+.paper .paper-inner {
+    display: block;
+    position: relative;
+    z-index: 2;
+}
+.paper:before, .paper:after {
+    position: absolute;
+    width: 40%;
+    height: 20px;
+    content: ' ';
+    left: 12px;
+    bottom: 12px;
+    background: transparent;
+    -webkit-transform: skew(-5deg) rotate(-5deg);
+    -moz-transform: skew(-5deg) rotate(-5deg);
+    -ms-transform: skew(-5deg) rotate(-5deg);
+    -o-transform: skew(-5deg) rotate(-5deg);
+    transform: skew(-5deg) rotate(-5deg);
+    .box-shadow(0 6px 20px rgba(0, 0, 0, 0.3));
+    /*z-index: -1;*/
+}
+.paper:after  {
+    left: auto;
+    right: 12px;
+    -webkit-transform: skew(5deg) rotate(5deg);
+    -moz-transform: skew(5deg) rotate(5deg);
+    -ms-transform: skew(5deg) rotate(5deg);
+    -o-transform: skew(5deg) rotate(5deg);
+    transform: skew(5deg) rotate(5deg);
+}

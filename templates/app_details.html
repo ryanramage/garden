@@ -1,20 +1,25 @@
-<div id="secondbar">
+<div id="secondbar" class="app_details">
   <div class="container">
     <div class="row">
-      <div class="span4">
-        {{#if screenshot}}
-        <img src="{{baseURL}}/_db/{{doc._id}}/{{screenshot}}" width="200" />
-        {{else}}
-        <div class="no_screenshot"><div>No screenshot</div></div>
-        {{/if}}
+      <div class="span2">
+        <img src="{{baseURL}}/_db/{{doc._id}}/{{icon_96}}" width="96" />
       </div>
       <div class="span10">
-        <h1>{{doc.kanso.config.name}}</h1>
-        <p>{{doc.kanso.config.description}}</p>
-        <div class="install_actions">
-          <a href="#" class="btn">Install to local CouchDB</a>
-          <a href="#" class="btn">Install to IrisCouch</a>
-        </div>
+        <h1>{{title}}</h1>
+        <ul class="inline_categories">
+          {{#each doc.kanso.config.categories}}
+            <li>{{this}}</li>
+          {{/each}}
+        </ul>
+        <span class="author">
+          By <a href="#">{{doc.kanso.pushed_by}}</a>
+        </span>
+        <span class="updated">
+          Updated {{updated}}
+        </span>
+      </div>
+      <div class="span4 install_actions">
+        <a class="btn primary install_btn" href="#">INSTALL</a>
       </div>
     </div>
   </div>
@@ -24,19 +29,51 @@
   <div id="content">
     <div class="row">
 
-      <div id="details_sidebar" class="span4">
-        <p><strong>Version:</strong> {{doc.kanso.config.version}}</p>
-        <p><strong>By:</strong> {{doc.kanso.pushed_by}}</p>
-        <p><strong>Built:</strong> {{doc.kanso.build_time}}</p>
-        <p><strong>Uploaded:</strong> {{doc.kanso.push_time}}</p>
+      <div class="span11">
+        <div id="screenshot" class="paper">
+          <img class="paper-inner" src="{{baseURL}}/{{first screenshots}}" width="640" />
+        </div>
+        <ul id="screenshot_nav">
+        {{#each screenshots}}
+          <li data-screenshot="{{baseURL}}/{{this}}"></li>
+        {{/each}}
+        </ul>
       </div>
 
-      <div class="span12">
+      <div id="details_sidebar" class="span5">
+        <h4>{{doc.kanso.config.description}}</h4>
+        {{#each long_description_paragraphs}}
+          <p>{{this}}</p>
+        {{/each}}
+        <!--
+        <div id="readme"></div>
+        -->
+        <!--
+        <table>
+          <tr>
+            <th>Version</th>
+            <td>{{doc.kanso.config.version}}</td>
+          </tr>
+          <tr>
+            <th>By</th>
+            <td>{{doc.kanso.pushed_by}}</td>
+          </tr>
+          <tr>
+            <th>Built</th>
+            <td>{{doc.kanso.build_time}}</td>
+          </tr>
+          <tr>
+            <th>Uploaded</th>
+            <td>{{doc.kanso.push_time}}</td>
+          </tr>
+        </table>
+        -->
+        <!--
         <h4>Manual install</h4>
         <pre>curl {{install_script_url}} | bash</pre>
         <p>You may want to <a rel="external" href="{{install_script_url}}">read the script</a> first.</p>
         <hr/>
-        <div id="readme"></div>
+        -->
       </div>
 
     </div>

@@ -6,6 +6,7 @@
 @import "headings.less";
 @import "editor_buttons.less";
 @import "sidebar.less";
+@import "paper.less";
 
 .cmd_username,
 .cmd_password {
@@ -15,12 +16,6 @@
 .cmd_var {
     font-weight: bold;
     color: #31d055;
-}
-
-#details_sidebar {
-    margin-top: 1em;
-    width: 200px;
-    margin-right: 20px;
 }
 
 .no_screenshot {
@@ -37,10 +32,6 @@
     color: white;
     text-align: center;
     width: 200px;
-}
-
-.install_actions {
-    margin: 2em 0 1em 0;
 }
 
 .container {
@@ -60,7 +51,7 @@
 ul.apps {
     margin: 0 0 2em 0;
     padding: 0;
-    list-style-type: none;
+    list-style: none;
 }
 ul.apps li {
     float: left;
@@ -97,4 +88,82 @@ ul.apps li:hover {
 .clearapps {
     clear: left;
     height: 2em;
+}
+
+#secondbar.app_details {
+    padding-top: 13px;
+    padding-bottom: 5px;
+}
+.app_details h1 {
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+.install_btn {
+    margin-top: 16px;
+    /*font-size: 1.2em;*/
+    font-weight: bold;
+    padding: 0.5em 2em;
+}
+.install_actions {
+    text-align: right;
+    margin-top: 8px;
+}
+
+#details_sidebar {
+    padding-left: 20px;
+    width: 260px;
+}
+
+ul.inline_categories {
+    margin: 0;
+    padding: 0;
+    display: inline;
+    list-style: none;
+}
+ul.inline_categories li {
+    margin: 0 0.5em 0 0;
+    padding: 0;
+    display: inline;
+    padding: 0.5em 1em;
+    background-color: #eee;
+    .border-radius(3px);
+    border: 1px solid #ccc;
+    font-size: 0.75em;
+    text-transform: uppercase;
+}
+
+.app_details .author,
+.app_details .updated {
+    border-left: 1px solid #ccc;
+    padding-left: 1em;
+    margin-left: 0.5em;
+}
+
+#screenshot {
+    margin: 1em 0 0 0;
+    padding: 0;
+}
+
+#screenshot_nav {
+    position: relative;
+    top: 24px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+}
+#screenshot_nav li {
+    margin: 0 0.2em;
+    display: inline-block;
+    background: #ccc;
+    width: 10px;
+    height: 10px;
+    .border-radius(50%);
+}
+#screenshot_nav li.active {
+    -webkit-box-shadow: inset 1px 1px 1px 1px #777, inset -1px -1px 1px 1px #ccc;
+    -moz-box-shadow: inset 1px 1px 1px 1px #777, inset -1px -1px 1px 1px #ccc;
+    -o-box-shadow: inset 1px 1px 1px 1px #777, inset -1px -1px 1px 1px #ccc;
+    box-shadow: inset 1px 1px 1px 1px #777, inset -1px -1px 1px 1px #ccc;
+    background: #999;
 }
