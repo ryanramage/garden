@@ -31,7 +31,11 @@
 
       <div class="span11">
         <div id="screenshot" class="paper">
-          <img class="paper-inner" src="{{baseURL}}/{{first screenshots}}" width="640" />
+          <div class="paper-inner">
+            <img src="{{baseURL}}/{{first screenshots}}" width="640" />
+            <a class="prev">&lt;</a>
+            <a class="next">&gt;</a>
+          </div>
         </div>
         <ul id="screenshot_nav">
         {{#head screenshots}}
@@ -48,29 +52,6 @@
         {{#each long_description_paragraphs}}
           <p>{{this}}</p>
         {{/each}}
-        <!--
-        <div id="readme"></div>
-        -->
-        <!--
-        <table>
-          <tr>
-            <th>Version</th>
-            <td>{{doc.kanso.config.version}}</td>
-          </tr>
-          <tr>
-            <th>By</th>
-            <td>{{doc.kanso.pushed_by}}</td>
-          </tr>
-          <tr>
-            <th>Built</th>
-            <td>{{doc.kanso.build_time}}</td>
-          </tr>
-          <tr>
-            <th>Uploaded</th>
-            <td>{{doc.kanso.push_time}}</td>
-          </tr>
-        </table>
-        -->
         <!--
         <h4>Manual install</h4>
         <pre>curl {{install_script_url}} | bash</pre>
