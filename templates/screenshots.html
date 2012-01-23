@@ -1,0 +1,23 @@
+<div id="screenshots">
+  <ul>
+    {{#each screenshots}}
+    <li>
+      <div class="paper">
+        <div class="paper-inner">
+          <img src="{{src}}" />
+        </div>
+      </div>
+    </li>
+    {{/each}}
+  </ul>
+  <a class="prev">&lt;</a>
+  <a class="next">&gt;</a>
+</div>
+<ul id="screenshot_nav">
+{{#head screenshots}}
+  <li class="active" data-screenshot="{{src}}"></li>
+{{/head}}
+{{#tail screenshots}}
+  <li data-screenshot="{{src}}"></li>
+{{/tail}}
+</ul>

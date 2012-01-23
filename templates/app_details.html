@@ -30,21 +30,9 @@
     <div class="row">
 
       <div class="span11">
-        <div id="screenshot" class="paper">
-          <div class="paper-inner">
-            <img src="{{baseURL}}/{{first screenshots}}" width="640" />
-            <a class="prev">&lt;</a>
-            <a class="next">&gt;</a>
-          </div>
+        <div id="screenshot_container">
+          <div class="loading">Loading&hellip;</div>
         </div>
-        <ul id="screenshot_nav">
-        {{#head screenshots}}
-          <li class="active" data-screenshot="{{baseURL}}/{{this}}"></li>
-        {{/head}}
-        {{#tail screenshots}}
-          <li data-screenshot="{{baseURL}}/{{this}}"></li>
-        {{/tail}}
-        </ul>
       </div>
 
       <div id="details_sidebar" class="span5">
