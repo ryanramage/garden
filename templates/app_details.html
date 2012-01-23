@@ -19,7 +19,7 @@
         </span>
       </div>
       <div class="span4 install_actions">
-        <a class="btn" href="#">Home</a>
+        <a class="btn" href="{{baseURL}}">Home</a>
         <a class="btn primary install_btn" href="#">Install</a>
       </div>
     </div>
@@ -41,6 +41,9 @@
         {{#each long_description_paragraphs}}
           <p>{{this}}</p>
         {{/each}}
+        {{#if meta.config.url}}
+          <p><a href="{{meta.config.url}}">Website</a></p>
+        {{/if}}
         <!--
         <h4>Manual install</h4>
         <pre>curl {{install_script_url}} | bash</pre>
