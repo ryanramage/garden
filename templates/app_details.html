@@ -2,17 +2,17 @@
   <div class="container">
     <div class="row">
       <div class="span2">
-        <img src="{{baseURL}}/_db/{{doc._id}}/{{icon_96}}" width="96" />
+        <img src="{{baseURL}}/_db/{{id}}/{{icon_96}}" width="96" />
       </div>
       <div class="span10">
         <h1>{{title}}</h1>
         <ul class="inline_categories">
-          {{#each doc.kanso.config.categories}}
+          {{#each meta.config.categories}}
             <li>{{this}}</li>
           {{/each}}
         </ul>
         <span class="author">
-          By <a href="#">{{doc.kanso.pushed_by}}</a>
+          By <a href="#">{{meta.pushed_by}}</a>
         </span>
         <span class="updated">
           Updated {{updated}}
@@ -36,7 +36,7 @@
       </div>
 
       <div id="details_sidebar" class="span5">
-        <h4>{{doc.kanso.config.description}}</h4>
+        <h4>{{meta.config.description}}</h4>
         {{#each long_description_paragraphs}}
           <p>{{this}}</p>
         {{/each}}
