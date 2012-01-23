@@ -177,31 +177,12 @@ ul.inline_categories li {
     margin: 0;
     padding: 0;
 
-    /* Firefox */
-    display:-moz-box;
-    -moz-box-orient:horizontal;
-    -moz-box-pack:center;
-    -moz-box-align:center;
-
-    /* Safari and Chrome */
-    display:-webkit-box;
-    -webkit-box-orient:horizontal;
-    -webkit-box-pack:center;
-    -webkit-box-align:center;
-
-    /* W3C */
-    display:box;
-    box-orient:horizontal;
-    box-pack:center;
-    box-align:center;
-
     position: absolute;
 
     top: 10px;
     left: 1px;
     .transition(left 1s ease-out);
-
-    line-height: 200px;
+    width: 68000px; // max 100 screenshots
 }
 
 #screenshots ul li {
@@ -209,20 +190,10 @@ ul.inline_categories li {
     width: 640px;
     height: 400px;
     text-align: center;
-    display: box;
-    -webkit-box-orient: horizontal;
-    /* The content of the body is horizontally centered */
-    -webkit-box-pack: center;
-    /* and vertically as well ... \o/ */
-    -webkit-box-align: center;
+    float: left;
 }
 #screenshots ul li div.paper {
     display: inline-block;
-    -moz-box-align: center;
-    -webkit-box-align: center;
-    -o-box-align: center;
-    box-align: center;
-
 }
 
 #screenshots ul img {
