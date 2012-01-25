@@ -17,14 +17,13 @@
     <div class="row">
 
       <div class="span12">
-        <p>Adding an app:</p>
-        <pre>kanso push {{upload_url}}</pre>
+        {{{include "app_list.html"}}}
       </div>
 
       <div id="sidebar" class="span4">
         <ul class="menu">
-          <li><a href="{{baseURL}}">Home</a></li>
-          <li class="active"><a href="{{baseURL}}/upload_app">Upload app</a></li>
+          <li class="active"><a href="{{baseURL}}">Home</a></li>
+          <li><a href="{{baseURL}}/upload_app">Upload app</a></li>
         </ul>
         <ul id="categories" class="menu">
           <li><a href="{{baseURL}}/all">All</a></li>

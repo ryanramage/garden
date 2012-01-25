@@ -1,54 +1,17 @@
-<div id="secondbar">
-  <div class="container">
-    <div class="stones"></div>
-    <div class="row">
-      <div class="span10">
-        <h1>Kanso Garden</h1>
-        <p>A place for sharing and discovering CouchApps</p>
+&nbsp;
+<ul class="apps">
+{{#rows}}
+  <li>
+    <a href="{{baseURL}}/details/{{id}}">
+      <div class="thumbnail">
+        <img src="{{baseURL}}/_db/{{id}}/{{promo_image}}" />
+        <div class="description">
+          <div class="description-inner">{{short_description}}</div>
+        </div>
+        <div class="name">{{title}}</div>
       </div>
-      <div class="span6">
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="container">
-  <div id="content">
-    <div class="row">
-
-      <div class="span12">
-        &nbsp;
-        <ul class="apps">
-        {{#rows}}
-          <li>
-            <a href="{{baseURL}}/details/{{id}}">
-              <div class="thumbnail">
-                <img src="{{baseURL}}/_db/{{id}}/{{promo_image}}" />
-                <div class="description">
-                  <div class="description-inner">{{short_description}}</div>
-                </div>
-                <div class="name">{{title}}</div>
-              </div>
-            </a>
-          </li>
-        {{/rows}}
-        </ul>
-        <div class="clearapps"></div>
-      </div>
-
-      <div id="sidebar" class="span4">
-        <ul class="menu">
-          <li class="active"><a href="{{baseURL}}">Home</a></li>
-          <li><a href="{{baseURL}}/upload_app">Upload app</a></li>
-        </ul>
-        <ul class="menu">
-          <li><a href="#">All</a></li>
-          <li><a href="#">Productivity</a></li>
-          <li><a href="#">Social</a></li>
-          <li><a href="#">Utilities</a></li>
-        </ul>
-      </div>
-
-    </div>
-  </div>
-</div>
+    </a>
+  </li>
+{{/rows}}
+</ul>
+<div class="clearapps"></div>
