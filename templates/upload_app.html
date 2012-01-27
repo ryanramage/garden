@@ -34,10 +34,114 @@
         </p>
 
         <h4>Icons</h4>
+        <p>
+          You must supply at least four icon sizes: 16x16, 48x48, 96x96, 128x128.
+          No image processing happens after you upload the app to the garden,
+          you are expected to properly format and scale your icons beforehand.
+        </p>
+        <p>
+          Icon sizes should be normalized, so they have the same visual weight.
+          For information on what makes a good icon, see the guidance on 
+          <a href="http://code.google.com/chrome/webstore/docs/images.html">supplying images</a>
+          from the Chrome Web Store.
+        </p>
+<pre><code class="javascript">{
+    "attachments": ["icons", ...],
+    "icons": {
+        "16": "icons/app_icon_16.png",
+        "48": "icons/app_icon_48.png",
+        "96": "icons/app_icon_96.png",
+        "128": "icons/app_icon_128.png"
+    },
+    "dependencies": {
+        "attachments": null,
+        ...
+    },
+    ...
+}</code></pre>
+        <p>
+          <strong>Note:</strong> In the above example the icons are added as
+          attachments before referencing the attachment paths for each icon size.
+        </p>
+
         <h4>Categories</h4>
+        <p>
+          Each app must belong to at least one category (though
+          preferably only one). If you're able to fit your app under an existing
+          category that is much preferred to adding a new one.
+        </p>
+<pre><code class="javascript">{
+    "categories": ["productivity"],
+    ...
+}</code></pre>
+
         <h4>Descriptions</h4>
-        <h4>Promo images</h4>
+        <p>
+          Apps require two descriptions: a short one used on the listing page and
+          a long one used only on the details page. Note that the short description
+          appears above the long one on the details page, so don't start the long
+          description by repeating the short one.
+        </p>
+<pre><code class="javascript">{
+    "description": "This is a short description",
+    "long_description": "This is a much longer description, possibly with multiple paragraphs.\n\nSeparate paragraphs with two newline characters.",
+    ...
+}</code></pre>
+
+        <h4>Promotional images</h4>
+        <p>
+          All apps should have at least a small promotional image 210x150 pixels.
+          This will be used to display your app on listings pages.
+          More sizes may be added in the future.
+        </p>
+<pre><code class="javascript">{
+    "attachments": ["images", ...],
+    "promo_images": {
+        "small": "images/promo_small.png"
+    },
+    "dependencies": {
+        "attachments": null,
+        ...
+    }
+    ...
+}</code></pre>
+        <strong>Note:</strong> In the above example the promo images are added as
+        attachments before referencing the attachment paths for each size.
+
         <h4>Screenshots</h4>
+        <p>
+          You must provide at least one screenshot with the app, though two or
+          three would be better. These images will be displayed on the app details
+          page and will be constrained to a 640x400 space. These images are not
+          processed before displaying, so consider resizing them appropriately
+          before uploading.
+        </p>
+<pre><code class="javascript">{
+    "attachments": ["images", ...],
+    "screenshots": [
+        "images/screenshot1.png",
+        "images/screenshot2.png",
+        "images/screenshot3.png"
+    ],
+    "dependencies": {
+        "attachments": null,
+        ...
+    }
+    ...
+}</code></pre>
+        <strong>Note:</strong> In the above example the screenshots are added as
+        attachments before referencing the attachment paths for each screenshot.
+
+        <h4>Website</h4>
+        <p>
+          If the app has a website or GitHub repository, you may wish to add this
+          to the <code>url</code> property in your <code>kanso.json</code> file.
+          It will be displayed on the app detail page.
+        </p>
+<pre><code class="javascript">{
+    "url": "https://github.com/kanso/garden"
+    ...
+}</code></pre>
       </div>
 
       <div id="sidebar" class="span4">
