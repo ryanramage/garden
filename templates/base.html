@@ -2,6 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"> 
   <head> 
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+    <link rel="stylesheet" type="text/css" href="{{baseURL}}/static/css/hljs_javascript.css" />
     <link rel="stylesheet" type="text/css" href="{{baseURL}}/static/css/garden.css" />
     <title>{{title}}</title> 
   </head> 
@@ -25,5 +26,20 @@
     <script type="text/javascript" src="{{baseURL}}/static/js/json2.js"></script>
     <script type="text/javascript" src="{{baseURL}}/modules.js"></script>
     <script type="text/javascript" src="{{baseURL}}/duality.js"></script>
+    <script type="text/javascript" src="{{baseURL}}/static/js/highlight/highlight.js"></script>
+    <script type="text/javascript" src="{{baseURL}}/static/js/highlight/languages/javascript.js"></script>
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-27460379-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
   </body>
 </html>
