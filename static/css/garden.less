@@ -7,6 +7,7 @@
 @import "editor_buttons.less";
 @import "sidebar.less";
 @import "paper.less";
+@import "note.less";
 
 .cmd_username,
 .cmd_password {
@@ -345,4 +346,34 @@ ul.inline_categories li a:hover {
 code {
     line-height: 18px;
     background: none !important;
+}
+
+#install_options {
+    text-align: center;
+    text-shadow: 0 2px 1px white;
+}
+#install_options h2 {
+    margin-top: -0.5em;
+}
+#install_options img {
+    margin-bottom: 1.5em;
+    opacity: 0.75;
+    cursor: pointer;
+}
+#install_options img:hover {
+    opacity: 1;
+}
+#install_options #manual_install {
+    border-right: 2px solid white;
+    width: 288px;
+    height: 190px;
+    float: left;
+    padding: 10px 20px 10px 40px;
+}
+#install_options #install_to_dashboard {
+    border-left: 1px solid #ddd;
+    width: 289px;
+    height: 190px;
+    float: left;
+    padding: 10px 40px 10px 20px;
 }
