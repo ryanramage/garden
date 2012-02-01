@@ -28,6 +28,7 @@
         "datelib": null,
         "path": null,
         "url": null,
-        "jsonp": null
+        "jsonp": null,
+        "cookies": null
     }
 }
