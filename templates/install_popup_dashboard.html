@@ -1,13 +1,20 @@
 <div class="dashboard_install_instructions">
   <h2>Install to Dashboard</h2>
-  <ul class="dashboard_urls">
-    {{#head dashboard_urls}}
-      <li><input checked="checked" type="radio" name="dashboard_url" id="dashboard_url_{{id}}" value="{{url}}"><label for="dashboard_url_{{id}}">{{url}}</label></li>
-    {{/head}}
-    {{#tail dashboard_urls}}
-      <li><input type="radio" name="dashboard_url" id="dashboard_url_{{id}}" value="{{url}}"><label for="dashboard_url_{{id}}">{{url}}</label></li>
-    {{/tail}}
-    <li><input type="radio" name="dashboard_url" id="dashboard_custom" value=""><label for="dashboard_custom"><input type="text" id="dashboard_custom_text" name="custom_dashboard_url" placeholder="New URL" /></label></li>
-  </ul>
-  <p>Select the dashboard URL you'd like to install to.</p>
+  {{#if dashboard_urls}}
+    <ul class="dashboard_urls">
+      {{#head dashboard_urls}}
+        <li><input checked="checked" type="radio" name="dashboard_url" id="dashboard_url_{{id}}" value="{{url}}"><label for="dashboard_url_{{id}}">{{url}}</label></li>
+      {{/head}}
+      {{#tail dashboard_urls}}
+        <li><input type="radio" name="dashboard_url" id="dashboard_url_{{id}}" value="{{url}}"><label for="dashboard_url_{{id}}">{{url}}</label></li>
+      {{/tail}}
+      <li><input type="radio" name="dashboard_url" id="dashboard_custom" value=""><label for="dashboard_custom"><input type="text" id="dashboard_custom_text" name="custom_dashboard_url" placeholder="New URL" /></label></li>
+    </ul>
+    <p>Select the dashboard URL you'd like to install to.</p>
+  {{else}}
+    <ul class="dashboard_urls">
+      <li><input checked="checked" type="radio" name="dashboard_url" id="dashboard_custom" value=""><label for="dashboard_custom"><input type="text" id="dashboard_custom_text" name="custom_dashboard_url" placeholder="New URL" /></label></li>
+    </ul>
+    <p>Enter the dashboard URL you'd like to install to.</p>
+  {{/if}}
 </div>
