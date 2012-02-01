@@ -27,6 +27,7 @@
         "sanitize": null,
         "datelib": null,
         "path": null,
-        "url": null
+        "url": null,
+        "jsonp": null
     }
 }
